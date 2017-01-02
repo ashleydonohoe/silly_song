@@ -71,9 +71,24 @@ func shortNameFromName(name: String) -> String {
         return ""
     }
     
-    while !vowels.contains(shortenedName.characters.first!) {
-        shortenedName.remove(at: shortenedName.startIndex)
+    // Checks if name has a vowel, since otherwise the name should stay as-is
+    var containsVowel:Bool = false
+    
+    for letter in shortenedName.characters {
+        if vowels.contains(letter) {
+            containsVowel = true
+            break
+        }
     }
+    
+    // If name has a consonant as first character, keep removing the first letter until the first vowel
+    if containsVowel {
+        while !vowels.contains(shortenedName.characters.first!) {
+            shortenedName.remove(at: shortenedName.startIndex)
+        }
+    }
+    
+    // Return name original or updated, depending on above conditions
     return shortenedName
 }
 

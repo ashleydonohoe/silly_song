@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  Silly Song
 //
-//  Created by Gabriele on 1/1/17.
+//  Created by Ashley Donohoe on 1/1/17.
 //  Copyright © 2017 Ashley Donohoe. All rights reserved.
 //
 
